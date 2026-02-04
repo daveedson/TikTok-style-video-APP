@@ -7,12 +7,27 @@
 
 import SwiftUI
 
-struct TabButton: View {
+ struct TabButton: View {
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action) {
+            VStack(spacing: 6) {
+                Text(title)
+                    .font(.system(size: 16, weight: isSelected ? .semibold : .regular))
+                    .foregroundColor(isSelected ? .white : .white.opacity(0.6))
+
+               
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: 30, height: 2)
+                    .opacity(isSelected ? 1 : 0)
+            }
+        }
+        .buttonStyle(.plain)
     }
 }
 
-#Preview {
-    TabButton()
-}
+

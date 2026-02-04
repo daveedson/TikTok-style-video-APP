@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ActionButtonsStack: View {
     @Binding var video: Video
+    var onLikeTap: () -> Void = {}
+    var onBookmarkTap: () -> Void = {}
     var onCommentTap: () -> Void = {}
     var onShareTap: () -> Void = {}
 
@@ -26,6 +28,7 @@ struct ActionButtonsStack: View {
                     video.isLiked.toggle()
                     video.likeCount += video.isLiked ? 1 : -1
                 }
+                onLikeTap()
             }
 
             // Comment Button
@@ -56,17 +59,9 @@ struct ActionButtonsStack: View {
                     video.isBookmarked.toggle()
                     video.bookmarkCount += video.isBookmarked ? 1 : -1
                 }
+                onBookmarkTap()
             }
         }
     }
 }
 
-#Preview {
-    ZStack {
-        Color.black.ignoresSafeArea()
-
-        ActionButtonsStack(video: .constant(.mock))
-            .padding(.trailing, 12)
-            .frame(maxWidth: .infinity, alignment: .trailing)
-    }
-}

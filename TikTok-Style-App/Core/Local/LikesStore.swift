@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-// MARK: - Likes Store Protocol
+
 protocol LikesStoreProtocol {
     func isLiked(videoId: Int) -> Bool
     func toggleLike(videoId: Int) -> Bool
@@ -16,30 +16,30 @@ protocol LikesStoreProtocol {
     func likedVideoIds() -> Set<Int>
 }
 
-// MARK: - Likes Store
+
 /// Persists liked video IDs using UserDefaults
 final class LikesStore: LikesStoreProtocol, ObservableObject {
 
     static let shared = LikesStore()
 
-    // MARK: - Keys
+  
     private enum Keys {
         static let likedVideos = "liked_video_ids"
         static let bookmarkedVideos = "bookmarked_video_ids"
     }
 
-    // MARK: - Properties
+
     private let defaults: UserDefaults
     @Published private(set) var likedIds: Set<Int> = []
     @Published private(set) var bookmarkedIds: Set<Int> = []
 
-    // MARK: - Initialization
+    
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
         loadFromStorage()
     }
 
-    // MARK: - Load from Storage
+   
     private func loadFromStorage() {
         if let likedArray = defaults.array(forKey: Keys.likedVideos) as? [Int] {
             likedIds = Set(likedArray)
@@ -50,7 +50,7 @@ final class LikesStore: LikesStoreProtocol, ObservableObject {
         }
     }
 
-    // MARK: - Save to Storage
+  
     private func saveLikes() {
         defaults.set(Array(likedIds), forKey: Keys.likedVideos)
     }
@@ -59,7 +59,7 @@ final class LikesStore: LikesStoreProtocol, ObservableObject {
         defaults.set(Array(bookmarkedIds), forKey: Keys.bookmarkedVideos)
     }
 
-    // MARK: - Likes
+
     func isLiked(videoId: Int) -> Bool {
         likedIds.contains(videoId)
     }
@@ -90,7 +90,7 @@ final class LikesStore: LikesStoreProtocol, ObservableObject {
         likedIds
     }
 
-    // MARK: - Bookmarks
+    // MARK: - Bookmark for Saving videos.
     func isBookmarked(videoId: Int) -> Bool {
         bookmarkedIds.contains(videoId)
     }

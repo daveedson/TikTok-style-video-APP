@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		18CE4F7E2F30F4C200ECB1AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18CE4F7D2F30F4C200ECB1AB /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		18CE4EE32F2F309900ECB1AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,6 +26,19 @@
 			remoteInfo = "TikTok-Style-App";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18CE4F822F30F4C200ECB1AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18CE4ED52F2F309700ECB1AB /* TikTok-Style-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TikTok-Style-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CE4F7E2F30F4C200ECB1AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +96,7 @@
 				18CE4ED72F2F309700ECB1AB /* TikTok-Style-App */,
 				18CE4EE52F2F309900ECB1AB /* TikTok-Style-AppTests */,
 				18CE4EEF2F2F309900ECB1AB /* TikTok-Style-AppUITests */,
+				18CE4F7C2F30F4C100ECB1AB /* Frameworks */,
 				18CE4ED62F2F309700ECB1AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +111,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		18CE4F7C2F30F4C100ECB1AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +128,7 @@
 				18CE4ED12F2F309700ECB1AB /* Sources */,
 				18CE4ED22F2F309700ECB1AB /* Frameworks */,
 				18CE4ED32F2F309700ECB1AB /* Resources */,
+				18CE4F822F30F4C200ECB1AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +139,7 @@
 			);
 			name = "TikTok-Style-App";
 			packageProductDependencies = (
+				18CE4F7D2F30F4C200ECB1AB /* Alamofire */,
 			);
 			productName = "TikTok-Style-App";
 			productReference = 18CE4ED52F2F309700ECB1AB /* TikTok-Style-App.app */;
@@ -195,6 +223,9 @@
 			);
 			mainGroup = 18CE4ECC2F2F309700ECB1AB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18CE4F382F30F22B00ECB1AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18CE4ED62F2F309700ECB1AB /* Products */;
 			projectDirPath = "";
@@ -400,6 +431,7 @@
 				DEVELOPMENT_TEAM = U8V7XT9UBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,6 +445,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiktoksyle.app.TikTok-Style-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -432,6 +468,7 @@
 				DEVELOPMENT_TEAM = U8V7XT9UBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +482,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiktoksyle.app.TikTok-Style-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -578,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18CE4F382F30F22B00ECB1AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18CE4F7D2F30F4C200ECB1AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CE4F382F30F22B00ECB1AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18CE4ECD2F2F309700ECB1AB /* Project object */;
 }

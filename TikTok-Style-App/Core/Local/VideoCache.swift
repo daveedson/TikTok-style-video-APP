@@ -9,16 +9,16 @@ import Foundation
 import Combine
 
 /// Shared cache for videos that have been viewed/interacted with
-/// This allows the Profile to show liked/saved videos from the feed
+/// This allows the Profile to show like and /saved videos from the feed
 @MainActor
 final class VideoCache: ObservableObject {
 
     static let shared = VideoCache()
 
-    // MARK: - Published Properties
+    
     @Published private(set) var cachedVideos: [Int: Video] = [:]
 
-    // MARK: - Public Methods
+    
 
     /// Add a video to the cache
     func cache(video: Video) {
